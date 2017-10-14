@@ -7,7 +7,7 @@ Page({
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
-    xxx: [],
+    blocks: [],
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
   //事件处理函数
@@ -53,35 +53,24 @@ Page({
       hasUserInfo: true
     })
   },
+
+  selectBlock: function() {
+    wx.navigateTo({
+      url: '/pages/blockInfo/blockInfo?height=111',
+    })
+  },
   
   testapi: function() {
     let that = this
     wx.request({
-      url: 'https://blockchain.info/rawblock/0000000000000bae09a7a393a8acded75aa67e46cb81f7acaa5ad94f9eacd103',
+      url: "http://10.30.95.156:8080/api/blockchain/get/blocks/1",
       header: {
         'content-type': 'application/json'
       },
       success: function (res) {
-        let userMenus = res.data
-        console.log(userMenus)
+        let data = res.data
         that.setData({
-          xxx: [
-            {
-              "height": 1,
-              "reward": 1,
-              "transNum": 1
-            },
-            {
-              "height": 1,
-              "reward": 1,
-              "transNum": 1
-            },
-            {
-              "height": 1,
-              "reward": 1,
-              "transNum": 1
-            },
-          ]
+          blocks: data
         })
       }
     })

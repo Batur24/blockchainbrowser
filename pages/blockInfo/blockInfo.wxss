@@ -1,0 +1,4 @@
+/* pages/blockInfo/blockInfo.wxss */
+.BlockInfo {
+    text-align: left
+}

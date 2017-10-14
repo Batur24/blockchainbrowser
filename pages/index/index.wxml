@@ -6,14 +6,20 @@
 
 <view class="container">
 
-  <view>
+  <view class="table">
     <text>最新区块</text>
-    <view wx:for="{{ xxx }}">
-      <view class="latestBlock">
-          <text>高度: {{ item.height }}</text>
-          <text> 奖励: {{ item.reward }} </text>
-          <text> 交易量: {{ item.transNum }} </text>
-      </view>
+
+<block wx:for="{{ blocks }}" wx:key="{{height}}">
+    <view class="tr bg-g" wx:if="{{index % 2 == 0}}" bindtap='selectBlock'>
+      <view class="td">高度: {{ item.height }}</view>
+      <view class="td">奖励: {{ item.reward }}</view>
+      <view class="td">交易量:  {{item.txn }}</view>
     </view>
+    <view class="tr" wx:else bindtap='selectBlock'>
+      <view class="td">高度: {{ item.height }}</view>
+      <view class="td">奖励: {{ item.reward }}</view>
+      <view class="td">交易量: {{ item.txn }}</view>
+    </view>
+    </block>
   </view>
 </view>
