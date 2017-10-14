@@ -10,6 +10,7 @@
 	"libVersion": "1.5.4",
 	"appid": "wxda0ad51a9a9ea132",
 	"projectname": "BlockChainBrowser",
+	"miniprogramRoot": "./",
 	"condition": {
 		"weapp": {
 			"current": -1,

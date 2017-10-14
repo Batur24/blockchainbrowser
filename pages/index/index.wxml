@@ -1,6 +1,6 @@
 <view>
   <view>
-    <input id="search" placeholder="搜索" />
+    <input id="search" placeholder="txhash/address/block" />
   </view>
 </view>
 
