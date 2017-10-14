@@ -1,2 +1,19 @@
-<!--pages/account/account.wxml-->
-<text>pages/account/account.wxml</text>
+<view>
+  <view>
+    <input id="search" placeholder="txhash/address/block" />
+  </view>
+</view>
+
+<view class="container">
+
+  <view>
+    <text>最新区块</text>
+    <view wx:for="{{ xxx }}">
+      <view class="latestBlock">
+          <text>高度: {{ item.height }}</text>
+          <text> 奖励: {{ item.reward }} </text>
+          <text> 交易量: {{ item.transNum }} </text>
+      </view>
+    </view>
+  </view>
+</view>

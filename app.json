@@ -15,14 +15,20 @@
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "数字区块"
+        "iconPath": "image/block.png",
+        "selectedIconPath": "image/block.png",
+        "text": "当前区块"
       },
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/token/token",
+        "iconPath": "image/token.png",
+        "selectedIconPath": "image/token.png",
         "text": "数字货币"
       },
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/account/account",
+        "iconPath": "image/account.png",
+        "selectedIconPath": "image/account.png",
         "text": "数字账户"
       }
     ]
