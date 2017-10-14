@@ -55,7 +55,9 @@ Page({
   },
 
   selectBlock: function() {
-    console.log("sss")
+    wx.navigateTo({
+      url: '/pages/blockInfo/blockInfo',
+    })
   },
   
   testapi: function() {

@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/token/token",
-    "pages/account/account"
+    "pages/account/account",
+    "pages/blockInfo/blockInfo"
   ],
   "window": {
     "backgroundTextStyle": "light",

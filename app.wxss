@@ -28,7 +28,7 @@
 .td {
     justify-content: center;
     text-align: center;
-    margin-right: 40rpx;
+    margin-right: 80rpx;
 }
 .bg-w{
   background: snow;
