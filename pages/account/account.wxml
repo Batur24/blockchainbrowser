@@ -1,22 +1,24 @@
 <view>
-  <view>
-    <input id="search" placeholder="txhash/address/block" />
-  </view>
+    <view class="section">
+      <input class="search" placeholder="搜索{{ searchPicker }}" />
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+        <text>选择</text>
+      </picker>
+    </view>
 </view>
 
 <view>
   <view class="table">
     <!--text>数字账户</text-->
-    <scroll-view scroll-x style="width: 100%">
     <block wx:for="{{ accounts }}" wx:key="{{address}}">
-      <view class="tr bg-g" wx:if="{{index % 2 == 0}}" bindtap='selectBlock'>
+      <view wx:if="{{index % 2 == 0}}" bindtap='selectBlock' style="background:#E6F3F9">
         <view >编号: {{ index + 1}}</view>
         <view >地址: {{ item.address }}</view>
         <view >余额: {{ item.balance }}</view>
         <view >占比: {{ item.percentage }}</view>
         <view >交易记录:{{item.txCount }}</view>
       </view>
-      <view class="tr" wx:else bindtap='selectBlock'>
+      <view  wx:else bindtap='selectBlock'>
         <view >编号: {{ index + 1}}</view>
         <view >地址: {{ item.address }}</view>
         <view >余额: {{ item.balance }}</view>
@@ -24,6 +26,5 @@
         <view >交易记录:{{item.txCount }}</view>
       </view>
     </block>
-    </scroll-view>
   </view>
 </view>

@@ -1,0 +1,23 @@
+/* pages/blockInfo/blockInfo.wxss */
+page {
+    background-color: #f9f9f9;
+    height: 100%;
+}
+
+.BlockInfo {
+    text-align: left
+}
+
+.scrollViewStyle {
+    white-space: nowrap;
+    display: flex;
+}
+
+.scrollViewStyle view {
+    width: 55%;
+    margin: 20rpx 20rpx;
+}
+
+.SetWidth {
+    display: inline-block;
+}
