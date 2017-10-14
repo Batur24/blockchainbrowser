@@ -4,26 +4,26 @@
   </view>
 </view>
 
-<view class="container">
-
+<view>
   <view class="table">
     <text>数字账户</text>
-
     <block wx:for="{{ blocks }}" wx:key="{{height}}">
+    <scroll-view class="scroll-view_H" scroll-x style="width: 100%">
       <view class="tr bg-g" wx:if="{{index % 2 == 0}}" bindtap='selectBlock'>
         <view class="td">编号: {{ index + 1}}</view>
         <view class="td">地址: {{ item.address }}</view>
-        <view class="td">余额: {{item.balance }}</view>
+        <view class="td">余额: {{ item.balance }}</view>
         <view class="td">占比: {{ item.percentage }}</view>
         <view class="td">交易记录:{{item.txCount }}</view>
       </view>
       <view class="tr" wx:else bindtap='selectBlock'>
         <view class="td">编号: {{ index + 1}}</view>
         <view class="td">地址: {{ item.address }}</view>
-        <view class="td">余额: {{item.balance }}</view>
+        <view class="td">余额: {{ item.balance }}</view>
         <view class="td">占比: {{ item.percentage }}</view>
         <view class="td">交易记录:{{item.txCount }}</view>
       </view>
+    </scroll-view>
     </block>
   </view>
 </view>
