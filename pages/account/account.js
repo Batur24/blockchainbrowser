@@ -54,14 +54,8 @@ Page({
     })
   },
 
-  selectBlock: function () {
-    wx.navigateTo({
-      url: '/pages/blockInfo/blockInfo?height=111',
-    })
-  },
-
-  testapi: function () {
-    let that = this
+  onLoad: function (options) {
+    let that = this;
     wx.request({
       url: "http://10.30.95.156:8080/api/blockchain/get/accounts",
       header: {
@@ -69,11 +63,15 @@ Page({
       },
       success: function (res) {
         let data = res.data
-        console.log(data)
         that.setData({
           blocks: data
         })
       }
+    })
+  },
+  selectAccount: function(name) {
+    wx.navigateTo({
+      url: '/pages/tokenInfo/tokenInfo?name=' + name,
     })
   }
 })
