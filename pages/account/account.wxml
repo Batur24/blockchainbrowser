@@ -6,14 +6,24 @@
 
 <view class="container">
 
-  <view>
-    <text>最新区块</text>
-    <view wx:for="{{ xxx }}">
-      <view class="latestBlock">
-          <text>高度: {{ item.height }}</text>
-          <text> 奖励: {{ item.reward }} </text>
-          <text> 交易量: {{ item.transNum }} </text>
+  <view class="table">
+    <text>数字账户</text>
+
+    <block wx:for="{{ blocks }}" wx:key="{{height}}">
+      <view class="tr bg-g" wx:if="{{index % 2 == 0}}" bindtap='selectBlock'>
+        <view class="td">编号: {{ index + 1}}</view>
+        <view class="td">地址: {{ item.address }}</view>
+        <view class="td">余额: {{item.balance }}</view>
+        <view class="td">占比: {{ item.percentage }}</view>
+        <view class="td">交易记录:{{item.txCount }}</view>
       </view>
-    </view>
+      <view class="tr" wx:else bindtap='selectBlock'>
+        <view class="td">编号: {{ index + 1}}</view>
+        <view class="td">地址: {{ item.address }}</view>
+        <view class="td">余额: {{item.balance }}</view>
+        <view class="td">占比: {{ item.percentage }}</view>
+        <view class="td">交易记录:{{item.txCount }}</view>
+      </view>
+    </block>
   </view>
 </view>
