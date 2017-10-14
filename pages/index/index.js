@@ -53,6 +53,10 @@ Page({
       hasUserInfo: true
     })
   },
+
+  selectBlock: function() {
+    console.log("sss")
+  },
   
   testapi: function() {
     let that = this
