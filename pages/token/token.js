@@ -20,7 +20,8 @@ Page({
     })
   },
 
-  selectToken: function(name) {
+  selectToken: function(event) {
+    let name = event.currentTarget.dataset.name;
     wx.navigateTo({
       url: '/pages/tokenInfo/tokenInfo?name=' + name,
     })

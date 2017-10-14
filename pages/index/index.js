@@ -8,6 +8,28 @@ Page({
     userInfo: {},
     hasUserInfo: false,
     blocks: [],
+    searchArray: ["txhash","address","block"],
+    searchPicker: "",
+    array: ['交易记录', '区块链地址', '区块高度','数字货币'],
+    objectArray: [
+      {
+        id: 0,
+        name: '交易记录'
+      },
+      {
+        id: 1,
+        name: '区块链地址'
+      },
+      {
+        id: 2,
+        name: '区块高度'
+      },
+      {
+        id: 3,
+        name: '数字货币'
+      }
+    ],
+    index: 0,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
   //事件处理函数
@@ -16,6 +38,7 @@ Page({
       url: '../logs/logs'
     })
   },
+
   onLoad: function () {
     this.testapi()
     if (app.globalData.userInfo) {
@@ -54,9 +77,18 @@ Page({
     })
   },
 
-  selectBlock: function() {
+  bindPickerChange: function(e) {
+    let that = this;
+    that.setData({
+      searchPicker: that.data.array[e.detail.value]
+    })
+  },
+
+  selectBlock: function(event) {
+    let height = event.currentTarget.dataset.height;
+    console.log(height)
     wx.navigateTo({
-      url: '/pages/blockInfo/blockInfo?height=111',
+      url: '/pages/blockInfo/blockInfo?height=' + height,
     })
   },
   

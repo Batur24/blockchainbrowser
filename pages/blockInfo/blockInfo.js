@@ -7,6 +7,7 @@ Page({
 
   onLoad: function (options) {
     let height = options.height
+    console.log(height)
     this.getBlockInfo(height)
   },
 

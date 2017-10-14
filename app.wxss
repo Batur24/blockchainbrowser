@@ -43,3 +43,24 @@
   height: 3rem;
   align-items: center;
 }
+.selectSearch, .search, picker {
+  display: inline-block
+}
+.search {
+  border: lightgrey;
+  border-style: solid;
+  border-width: 1px;
+  font-size: 14px;
+  border-radius: 5px;
+  height: 31px;
+  padding-left: 10px;
+  width: 60%;
+  margin-left: 40rpx;
+}
+.selectSearch {
+
+}
+picker {
+  position: absolute;
+  right: 40rpx;
+}

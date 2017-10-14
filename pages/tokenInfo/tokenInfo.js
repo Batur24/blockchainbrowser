@@ -20,6 +20,7 @@ Page({
       },
       success: function (res) {
         let data = res.data
+        console.log(data)
         that.setData({
           tokenInfo: data
         })

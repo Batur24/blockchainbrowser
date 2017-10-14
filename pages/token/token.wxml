@@ -9,14 +9,14 @@
   <view class="table">
     <!--text>货币列表</text-->
     <block wx:for="{{ tokens }}" wx:key="{{ price }}">
-      <view class="tr bg-g" wx:if="{{index % 2 == 0}}" bindtap='selectToken'>
+      <view class="tr bg-g" data-name="{{item.tokenInformation}}" wx:if="{{index % 2 == 0}}" bindtap='selectToken'>
         <image class="tokenImage" src="{{ item.image }}" />
         <view class="td">price: {{ item.price }}</view>
         <view class="td">change: {{ item.change }}</view>
         <view class="td">marketCap: {{item.marketCap }}</view>
       </view>
 
-      <view class="tr" wx:else bindtap='selectToken'>
+      <view class="tr" data-name="{{item.tokenInformation}}" wx:else bindtap='selectToken'>
         <image class="tokenImage" src="{{ item.image }}" />
         <view class="td">price: {{ item.price }}</view>
         <view class="td">change: {{ item.change }}</view>
