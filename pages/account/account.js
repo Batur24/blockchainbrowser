@@ -63,12 +63,13 @@ Page({
   testapi: function () {
     let that = this
     wx.request({
-      url: "http://10.30.95.156:8080/api/blockchain/get/blocks/1",
+      url: "http://10.30.95.156:8080/api/blockchain/get/accounts",
       header: {
         'content-type': 'application/json'
       },
       success: function (res) {
         let data = res.data
+        console.log(data)
         that.setData({
           blocks: data
         })
