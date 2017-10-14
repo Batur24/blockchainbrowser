@@ -22,6 +22,11 @@
 
 .tokenImage {
    height: 50rpx;
-   width: 50rpx;
+   width: 8%;
    margin: 0 20rpx;
+}
+
+.tokenName {
+  width: 10%;
+  font-size: 16rpx;
 }
