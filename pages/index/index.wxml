@@ -1,7 +1,7 @@
 <view>
   <view>
     <view class="section">
-      <input class="search" placeholder="搜索{{ searchPicker }}" />
+      <input class="search" placeholder="搜索{{ searchPicker }}" bindconfirm="searchData"/>
       <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
         <text>选择</text>
       </picker>

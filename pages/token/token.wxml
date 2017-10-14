@@ -1,6 +1,11 @@
 <view>
   <view>
-    <input id="search" placeholder="txhash/address/block" />
+    <view class="section">
+      <input class="search" placeholder="搜索{{ searchPicker }}" bindconfirm="searchData" />
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+        <text>选择</text>
+      </picker>
+    </view>
   </view>
 </view>
 
@@ -10,17 +15,19 @@
     <!--text>货币列表</text-->
     <block wx:for="{{ tokens }}" wx:key="{{ price }}">
       <view class="tr bg-g" data-name="{{item.tokenInformation}}" wx:if="{{index % 2 == 0}}" bindtap='selectToken'>
-        <image class="tokenImage" src="{{ item.image }}" />
-        <view class="td">price: {{ item.price }}</view>
-        <view class="td">change: {{ item.change }}</view>
-        <view class="td">marketCap: {{item.marketCap }}</view>
+        <view class="td tokenName">{{ item.tokenInformation }}</view>
+        <image class="td tokenImage" src="{{ item.image }}" />
+        <view class="td price">price: {{ item.price }}</view>
+        <view class="td change">change: {{ item.change }}</view>
+        <!--view class="td">marketCap: {{item.marketCap }}</view-->
       </view>
 
       <view class="tr" data-name="{{item.tokenInformation}}" wx:else bindtap='selectToken'>
-        <image class="tokenImage" src="{{ item.image }}" />
-        <view class="td">price: {{ item.price }}</view>
-        <view class="td">change: {{ item.change }}</view>
-        <view class="td">marketCap: {{item.marketCap }}</view>
+        <view class="td tokenName">{{ item.tokenInformation }}</view>
+        <image class="td tokenImage" src="{{ item.image }}" />
+        <view class="td price">price: {{ item.price }}</view>
+        <view class="td change">change: {{ item.change }}</view>
+        <!--view class="td">marketCap: {{item.marketCap }}</view-->
       </view>
     </block>
   </view>

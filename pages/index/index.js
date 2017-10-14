@@ -8,8 +8,7 @@ Page({
     userInfo: {},
     hasUserInfo: false,
     blocks: [],
-    searchArray: ["txhash","address","block"],
-    searchPicker: "",
+    searchPicker: "区块高度",
     array: ['交易记录', '区块链地址', '区块高度','数字货币'],
     objectArray: [
       {
@@ -40,7 +39,7 @@ Page({
   },
 
   onLoad: function () {
-    this.testapi()
+    this.getBlocks();
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -82,6 +81,30 @@ Page({
     that.setData({
       searchPicker: that.data.array[e.detail.value]
     })
+    console.log(that.data.searchPicker)
+  },
+
+  searchUrl: function() {
+    switch (this.data.searchPicker) {
+      case "交易记录":
+        return "/pages/blockInfo/blockInfo?height="
+      case "区块链地址":
+        return "/pages/blockInfo/blockInfo?height="
+      case "区块高度":
+        return "/pages/blockInfo/blockInfo?height="
+      case "数字货币":
+        return "/pages/tokenInfo/tokenInfo?name="
+      default:
+        break;
+    }
+  },
+
+  searchData: function(e) {
+    let url = this.searchUrl();
+    let value =e.detail.value;
+    wx.navigateTo({
+      url: url + value,
+    })
   },
 
   selectBlock: function(event) {
@@ -92,10 +115,10 @@ Page({
     })
   },
   
-  testapi: function() {
+  getBlocks: function() {
     let that = this
     wx.request({
-      url: "http://10.30.95.156:8080/api/blockchain/get/blocks/1",
+      url: "https://batur.91laysen.cn/api/blockchain/get/blocks/1",
       header: {
         'content-type': 'application/json'
       },

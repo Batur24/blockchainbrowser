@@ -14,8 +14,8 @@ page {
 }
 
 .scrollViewStyle view {
-    width: 55%;
-    margin: 20rpx 20rpx;
+    width: 60%;
+    margin: 10rpx 20rpx;
 }
 
 .SetWidth {

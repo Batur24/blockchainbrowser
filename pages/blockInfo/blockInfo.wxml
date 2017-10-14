@@ -7,6 +7,11 @@
       <!--view class="BlockInfo">transactions: {{ blockInfo.transactions }}</view-->
       <scroll-view scroll-x="true" class="scrollViewStyle">
         <view>
+          <view class="SetWidth">Height:</view>
+          <text>{{ blockInfo.height }}</text>
+        </view>
+
+        <view>
           <view class="SetWidth">hash:</view>
           <text>{{ blockInfo.hash }}</text>
         </view>

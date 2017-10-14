@@ -6,7 +6,6 @@ Page({
   },
 
   onLoad: function (options) {
-    console.log(options)
     let name = options.name;
     this.getTokenInfo(name)
   },
@@ -14,7 +13,7 @@ Page({
   getTokenInfo: function(name) {
     let that = this;
     wx.request({
-      url: "http://10.30.95.156:8080/api/blockchain/get/token/" + name,
+      url: "https://batur.91laysen.cn/api/blockchain/get/token/" + name,
       header: {
         'content-type': 'application/json'
       },

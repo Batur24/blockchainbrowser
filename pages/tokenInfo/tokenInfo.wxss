@@ -1,1 +1,22 @@
-/* pages/tokenInfo/tokenInfo.wxss */
+page {
+    background-color: #f9f9f9;
+    height: 100%;
+}
+
+.BlockInfo {
+    text-align: left
+}
+
+.scrollViewStyle {
+    white-space: nowrap;
+    display: flex;
+}
+
+.scrollViewStyle view {
+    width: 60%;
+    margin: 0 20rpx;
+}
+
+.SetWidth {
+    display: inline-block;
+}
