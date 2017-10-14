@@ -6,14 +6,22 @@
 
 <view class="container">
 
-  <view>
-    <text>最新区块</text>
-    <view wx:for="{{ xxx }}">
-      <view class="latestBlock">
-          <text>高度: {{ item.height }}</text>
-          <text> 奖励: {{ item.reward }} </text>
-          <text> 交易量: {{ item.transNum }} </text>
+  <view class="table">
+    <!--text>货币列表</text-->
+    <block wx:for="{{ tokens }}" wx:key="{{ price }}">
+      <view class="tr bg-g" wx:if="{{index % 2 == 0}}" bindtap='selectToken'>
+        <image class="tokenImage" src="{{ item.image }}" />
+        <view class="td">price: {{ item.price }}</view>
+        <view class="td">change: {{ item.change }}</view>
+        <view class="td">marketCap: {{item.marketCap }}</view>
       </view>
-    </view>
+
+      <view class="tr" wx:else bindtap='selectToken'>
+        <image class="tokenImage" src="{{ item.image }}" />
+        <view class="td">price: {{ item.price }}</view>
+        <view class="td">change: {{ item.change }}</view>
+        <view class="td">marketCap: {{item.marketCap }}</view>
+      </view>
+    </block>
   </view>
 </view>

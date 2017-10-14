@@ -19,3 +19,9 @@
 .usermotto {
   margin-top: 200px;
 }
+
+.tokenImage {
+   height: 50rpx;
+   width: 50rpx;
+   margin: 0 20rpx;
+}

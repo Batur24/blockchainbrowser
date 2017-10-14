@@ -1,22 +1,48 @@
-<view class="container">
+<view class="block">
 
-  <view class="table">
-    <text>{{ height }} 区块</text>
+  <view>
+    <!--text>{{ height }} 区块</text-->
 
     <block>
-      <view class="BlockInfo">transactions: {{ blockInfo.transactions }}</view>
-      <view>hash: {{ blockInfo.hash }}</view>
-      <view>parentHash: {{ blockInfo.parentHash }}</view>
-      <view>sha3uncles: {{ blockInfo.sha3uncles }}</view>
-      <view>mined by: {{ blockInfo.minedBy }}</view>
-      <view>difficulty: {{ blockInfo.difficulty }}</view>
-      <view>totalDifficulty: {{ blockInfo.totalDifficulty }}</view>
-      <view>size: {{ blockInfo.size }}</view>
-      <view>gasUsed: {{ blockInfo.gasUsed }}</view>
-      <view>gasLimit: {{ blockInfo.gasLimit }}</view>
-      <view>nonce: {{ blockInfo.nonce }}</view>
-      <view>unclesReward: {{ blockInfo.unclesReward }}</view>
-      <view>extraData: {{ blockInfo.extraData }}</view>
+      <!--view class="BlockInfo">transactions: {{ blockInfo.transactions }}</view-->
+      <scroll-view scroll-x="true" class="scrollViewStyle">
+        <view>
+          <view class="SetWidth">hash:</view>
+          <text>{{ blockInfo.hash }}</text>
+        </view>
+        <view>
+          <view class="SetWidth">parentHash: </view>
+          <text>{{ blockInfo.parentHash }}</text>
+        </view>
+        <view>
+          <view class="SetWidth">sha3uncles:  </view>
+          <text>{{ blockInfo.sha3uncles }}</text>
+        </view>
+        <view>
+          <view class="SetWidth">mined by: </view>
+          <text>{{ blockInfo.minedBy }}</text>
+        </view>
+        <view>
+          <view class="SetWidth">totalDifficulty: </view>
+          <text>{{ blockInfo.totalDifficulty }}</text>
+        </view>
+        <view>
+          <view class="SetWidth">size: </view>
+          <text>{{ blockInfo.size}}</text>
+        </view>
+        <view>
+          <view class="SetWidth">gasUsed: </view>
+          <text>{{ blockInfo.gasUsed }}</text>
+        </view>
+        <view>
+          <view class="SetWidth">gasLimit: </view>
+          <text>{{ blockInfo.gasLimit }}</text>
+        </view>
+        <view>
+          <view class="SetWidth">nonce: </view>
+          <text>{{ blockInfo.nonce}}</text>
+        </view>
+      </scroll-view>
     </block>
   </view>
 </view>

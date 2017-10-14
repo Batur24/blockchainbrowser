@@ -4,7 +4,8 @@
     "pages/logs/logs",
     "pages/token/token",
     "pages/account/account",
-    "pages/blockInfo/blockInfo"
+    "pages/blockInfo/blockInfo",
+    "pages/tokenInfo/tokenInfo"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -2,3 +2,18 @@
 .BlockInfo {
     text-align: left
 }
+
+.scrollViewStyle {
+    white-space: nowrap;
+    display: flex;
+}
+
+.scrollViewStyle view {
+    width: 50%;
+    margin: 0 20rpx;
+}
+
+.SetWidth {
+    display: inline-block;
+}
+
