@@ -1,0 +1,30 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/token/token",
+    "pages/account/account"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "数字区块"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "数字货币"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "数字账户"
+      }
+    ]
+  }
+}
