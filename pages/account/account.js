@@ -7,7 +7,7 @@ Page({
   onLoad: function (options) {
     let that = this;
     wx.request({
-      url: "http://10.30.95.156:8080/api/blockchain/get/accounts",
+      url: "https://batur.91laysen.cn/api/blockchain/get/accounts",
       header: {
         'content-type': 'application/json'
       },
@@ -22,7 +22,7 @@ Page({
 
   selectaccounts: function(name) {
     wx.navigateTo({
-      url: '/pages/tokenInfo/accountsInfo?name=' + name,
+      url: '/pages/accountInfo/accountInfo?name=' + name,
     })
   }
 

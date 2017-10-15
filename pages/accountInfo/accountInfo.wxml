@@ -1,22 +1,41 @@
-<view class="container">
+
+<view class="block">
 
   <view class="table">
-    <text>{{ height }} 数字账户</text>
-
     <block>
-      <!--view class="BlockInfo">transactions: {{ tokenInfo.transactions }}</view-->
-      <view>hash: {{ blockInfo.hash }}</view>
-      <view>parentHash: {{ blockInfo.parentHash }}</view>
-      <view>sha3uncles: {{ blockInfo.sha3uncles }}</view>
-      <view>mined by: {{ blockInfo.minedBy }}</view>
-      <view>difficulty: {{ blockInfo.difficulty }}</view>
-      <view>totalDifficulty: {{ blockInfo.totalDifficulty }}</view>
-      <view>size: {{ blockInfo.size }}</view>
-      <view>gasUsed: {{ blockInfo.gasUsed }}</view>
-      <view>gasLimit: {{ blockInfo.gasLimit }}</view>
-      <view>nonce: {{ blockInfo.nonce }}</view>
-      <view>unclesReward: {{ blockInfo.unclesReward }}</view>
-      <view>extraData: {{ blockInfo.extraData }}</view>
+      <scroll-view scroll-x="true" class="scrollViewStyle">
+        <view>
+          <view class="SetWidth">地址:</view>
+          <text>{{ accountInfo.address }}</text>
+        </view>
+
+        <view>
+          <view class="SetWidth">市值: </view>
+          <text>{{ accountInfo.totalValue  }}</text>
+        </view>
+
+        <view>
+          <view class="SetWidth">币值: </view>
+          <text>{{ accountInfo.valuePerToken }}</text>
+        </view>
+
+        <view>
+          <view class="SetWidth">拥有人数: </view>
+          <text>{{ accountInfo.tokenHolders }}</text>
+        </view>
+
+        <view>
+          <view class="SetWidth">合约地址: </view>
+          <text>{{ accountInfo.contractAddress }}</text>
+        </view>
+
+        <view>
+          <view class="SetWidth">币值精度: </view>
+          <text>{{ accountInfo.tokenDecimals }}</text>
+        </view>
+
+      </scroll-view>
     </block>
   </view>
 </view>
+

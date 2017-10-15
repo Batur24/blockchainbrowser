@@ -21,3 +21,7 @@ page {
 .SetWidth {
     display: inline-block;
 }
+
+.setMargin {
+    margin: 40rpx;
+}

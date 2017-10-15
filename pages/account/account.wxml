@@ -11,19 +11,19 @@
   <view class="table">
     <!--text>数字账户</text-->
     <block wx:for="{{ accounts }}" wx:key="{{address}}">
-      <view wx:if="{{index % 2 == 0}}" bindtap='selectBlock' style="background:#E6F3F9">
-        <view >编号: {{ index + 1}}</view>
-        <view >地址: {{ item.address }}</view>
-        <view >余额: {{ item.balance }}</view>
-        <view >占比: {{ item.percentage }}</view>
-        <view >交易记录:{{item.txCount }}</view>
+      <view class="setMargin" wx:if="{{index % 2 == 0}}" bindtap='selectaccounts' style="background:#E6F3F9">
+        <view>编号: {{ index + 1}}</view>
+        <view>地址: {{ item.address }}</view>
+        <view>余额: {{ item.balance }}</view>
+        <view>占比: {{ item.percentage }}</view>
+        <view>交易记录:{{item.txCount }}</view>
       </view>
-      <view  wx:else bindtap='selectBlock'>
-        <view >编号: {{ index + 1}}</view>
-        <view >地址: {{ item.address }}</view>
-        <view >余额: {{ item.balance }}</view>
-        <view >占比: {{ item.percentage }}</view>
-        <view >交易记录:{{item.txCount }}</view>
+      <view class="setMargin" wx:else bindtap='selectaccounts'>
+        <view>编号: {{ index + 1}}</view>
+        <view>地址: {{ item.address }}</view>
+        <view>余额: {{ item.balance }}</view>
+        <view>占比: {{ item.percentage }}</view>
+        <view>交易记录:{{item.txCount }}</view>
       </view>
     </block>
   </view>
