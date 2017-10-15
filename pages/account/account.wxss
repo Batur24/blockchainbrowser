@@ -1,8 +1,4 @@
 /* pages/blockInfo/blockInfo.wxss */
-page {
-    background-color: #f9f9f9;
-    height: 100%;
-}
 
 .BlockInfo {
     text-align: left
@@ -14,11 +10,11 @@ page {
 }
 
 .scrollViewStyle view {
-    width: 55%;
     margin: 20rpx 20rpx;
 }
 
 .SetWidth {
+    width: 35%;
     display: inline-block;
 }
 

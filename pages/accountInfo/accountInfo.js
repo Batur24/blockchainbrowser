@@ -6,7 +6,7 @@ Page({
   },
 
   onLoad: function (options) {
-    let name = options.address;
+    let name = options.name;
     this.getaccountInfo(name)
   },
 

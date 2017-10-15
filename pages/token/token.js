@@ -33,7 +33,8 @@ Page({
         'content-type': 'application/json'
       },
       success: function (res) {
-        let data = res.data
+        let data = res.data.filter(item => item.price);
+        console.log(data)
         that.setData({
           tokens: data
         })

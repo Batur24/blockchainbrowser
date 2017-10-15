@@ -1,41 +1,49 @@
-
 <view class="block">
 
   <view class="table">
     <block>
       <scroll-view scroll-x="true" class="scrollViewStyle">
-        <view>
-          <view class="SetWidth">地址:</view>
-          <text>{{ accountInfo.address }}</text>
-        </view>
 
-        <view>
-          <view class="SetWidth">市值: </view>
-          <text>{{ accountInfo.totalValue  }}</text>
-        </view>
+        <block wx:for="{{ accountInfo }}" wx:key="{{txHash}}">
+          <view style="margin-bottom: 40rpx">
+          <view>
+            <view class="SetWidth">value:</view>
+            <text>{{ item.value }}</text>
+          </view>
 
-        <view>
-          <view class="SetWidth">币值: </view>
-          <text>{{ accountInfo.valuePerToken }}</text>
-        </view>
+          <view>
+            <view class="SetWidth">地址:</view>
+            <text>{{ item.txHash }}</text>
+          </view>
 
-        <view>
-          <view class="SetWidth">拥有人数: </view>
-          <text>{{ accountInfo.tokenHolders }}</text>
-        </view>
+          <view>
+            <view class="SetWidth">高度: </view>
+            <text>{{ item.block }}</text>
+          </view>
 
-        <view>
-          <view class="SetWidth">合约地址: </view>
-          <text>{{ accountInfo.contractAddress }}</text>
-        </view>
+          <view>
+            <view class="SetWidth">时间: </view>
+            <text>{{ item.age }}</text>
+          </view>
 
-        <view>
-          <view class="SetWidth">币值精度: </view>
-          <text>{{ accountInfo.tokenDecimals }}</text>
-        </view>
+          <view>
+            <view class="SetWidth">发送人: </view>
+            <text>{{ item.from }}</text>
+          </view>
+
+          <view>
+            <view class="SetWidth">接收人: </view>
+            <text>{{ item.to }}</text>
+          </view>
+
+          <view>
+            <view class="SetWidth">交易费用: </view>
+            <text>{{ item.txFee }}</text>
+          </view>
+          </view>
+        </block>
 
       </scroll-view>
     </block>
   </view>
 </view>
-

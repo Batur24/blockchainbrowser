@@ -11,14 +11,14 @@
   <view class="table">
     <!--text>数字账户</text-->
     <block wx:for="{{ accounts }}" wx:key="{{address}}">
-      <view class="setMargin" wx:if="{{index % 2 == 0}}" bindtap='selectaccounts' style="background:#E6F3F9; word-wrap:break-word">
+      <view data-name="{{ item.address }}" class="setMargin" wx:if="{{index % 2 == 0}}" bindtap='selectaccounts' style="background:#E6F3F9; word-wrap:break-word">
         <view>编号: {{ index + 1}}</view>
         <view>地址: {{ item.address }}</view>
         <view>余额: {{ item.balance }}</view>
         <view>占比: {{ item.percentage }}</view>
         <view>交易记录:{{item.txCount }}</view>
       </view>
-      <view class="setMargin" wx:else bindtap='selectaccounts' style="word-wrap:break-word">
+      <view data-name="{{ item.address }}" class="setMargin" wx:else bindtap='selectaccounts' style="word-wrap:break-word">
         <view>编号: {{ index + 1}}</view>
         <view>地址: {{ item.address }}</view>
         <view>余额: {{ item.balance }}</view>

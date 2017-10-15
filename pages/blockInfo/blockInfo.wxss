@@ -14,11 +14,11 @@ page {
 }
 
 .scrollViewStyle view {
-    width: 60%;
     margin: 10rpx 20rpx;
 }
 
 .SetWidth {
+    width: 15%;
     display: inline-block;
 }
 
